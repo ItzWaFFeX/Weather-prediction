@@ -7,5 +7,14 @@
 </head>
 <body>
     <h1>Weather prediction</h1>
+    <form action="/getweather" method="post">
+        <input type="text", name="city", id="city">
+        <input type="submit">
+    </form>
+
+    {%if data%}
+         <h2>Weather for {{data.location}}</h2>
+         <p>Temperature {{data.temperature}}</p>
+    {% endif %}
 </body>
 </html>
